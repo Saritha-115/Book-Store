@@ -23,13 +23,13 @@ const CreateBooks = () => {
       .post("http://localhost:5555/books", data)
       .then(() => {
         setLoading(false);
-        // enqueueSnackbar("Book Created successfully", { variant: "success" });
+        
         navigate("/");
       })
       .catch((error) => {
         setLoading(false);
         alert("An error happened. Please Chack console");
-        // enqueueSnackbar("Error", { variant: "error" });
+        
         console.log(error);
       });
   };
